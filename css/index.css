@@ -80,69 +80,62 @@ li.nav:hover {
 section {
 	display: grid;
 	justify-content: center;
-	grid-template-columns: 690px 950px;
-	grid-template-rows: 495px 296px 467px 367px;
+	grid-template-columns: 50% 50%;
+	grid-template-rows: 75% 50% 75%;
 	grid-template-areas: 
 		"heroimg headerSection"
 		"storySection summarySection"
-		"knowledgeSection portfolioSection"
-		"connectSection portfolioSection";
-}
-#left {
-	width: 690px;	
-}
-#right {
-	width: 950px;
-	
+		"connectSection connectSection";
 }
 
 /*About Me section*/
 #heroimg {
-	width: 100%;
+	background-image: url("../images/IMG_6686.JPG");
+	background-size: cover;
+	background-position: center;
 	grid-area: heroimg;
 }
 #storySection {
 	text-align: right;
-	width: 80%;
 	grid-area: storySection;
-	padding-left: 40px;
 	padding-top: 56px;
+	margin-right: 80px;
+	margin-left: 24px;
 }
 #headerSection {
-	width: 950px;
-	height: 495px;
+	
 	background-color: #89A67C;
 	opacity: 1;
 	display: flex;
-	text-align: center;
+	text-align: left;
 	justify-content: center;
 	flex-direction: column;
 	grid-area: headerSection;
 }
 #name {
 	padding: 0px;
-	margin: 0px 0px 0px 80px;
+	margin: 0;
+	margin-left: 80px;
 	align-self: flex-start;
 }
 #position {
 	padding: 0px;
 	margin: 0px;
+	margin-left: 80px;
 }
 #position2 {
 	padding: 0px;
-	margin: 0px 80px;
-	align-self: flex-end;
+	margin: 0px;
+	margin-left: 80px;
 }
 #summarySection {
-	width: 886px;
-	height: 296px;
 	background-color: #ECE3DE;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	flex-basis: auto;
-	padding-left: 40px;
+	padding-left: 80px;
 	padding-right: 24px;
 	grid-area: summarySection;
 }
@@ -191,12 +184,14 @@ section {
 	border: 2px solid #EBE3DF;
 	opacity: 1;
 }
-#portfolioButton {
+.portfolioButton {
 	width: 259px;
     height: 30px;
-	font-size: 14px;
+	font-size: 12px;
 	margin-left: 160px;
+	margin: 0 auto;
 }
+
 
 /*Skills & Contact Section*/
 
@@ -227,8 +222,6 @@ section {
 }
 #connectSection {
 	grid-area: connectSection;
-	width: 690px;
-	height: 399px;
 	background: #25263D 0% 0% no-repeat padding-box;
 	border: 1px solid #707070;
 	opacity: 1;
@@ -241,29 +234,18 @@ section {
 	color: white;
 }
 footer {
-	margin-top: 160px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+	margin-top: 0px;
+	position: absolute;
+	
 }
 /*Laptop media query*/
 @media only screen and (max-width: 1440px) {
-	section {
-		display: grid;
-		justify-content: center;
-		grid-template-columns: 518px 712px;
-		grid-template-rows: 495px 370px 584px 459px;
-		grid-template-areas: 
-		"heroimg headerSection"
-		"storySection summarySection"
-		"knowledgeSection portfolioSection"
-		"connectSection portfolioSection";
-	}
+	
 	body {
 		font-size: 16px;
 	}
 	h1 {
-		font-size: 54px;
+		font-size: 52px;
 	}
 	h2 {
 	font-size: 46px;
@@ -277,26 +259,14 @@ footer {
 	p {
 	line-height: 150%;
 }
-	#left {
-		width: 518px;	
-	}
-	#right {
-		width: 712px;
-	}
-	#headerSection {
-		width: 712px;
-		height: 495px;
-	}
+	
 	#name {
-	margin: 0px 0px 0px 40px;
+	margin: 0px 0px 0px px;
   	}
 	#position2 {
-	margin: 0px 40px;
+	margin: 0px px;
 }
-	#summarySection {
-	width: 648px;
-	height: 296px;
-	}
+
 	#portfolioHeader {
 	margin-bottom: 40px;
 }
@@ -308,27 +278,18 @@ footer {
 	width: 712px;
 	height: 280px;
 	}
-	#storySection{
-		width: 518;
-		padding-top: 80px;
-	}
+	
 	#knowledgeSection {
 		width: 518px;
 		margin-top: 120px;
 		margin-bottom: -108px;
 		padding-top: 48px;
 	}
-	#connectSection {
-		grid-area: connectSection;
-		width: 518px;
-		height: 399px;
+	
+	.portfolioButton {
+		margin-bottom: 8px;
 	}
-	#portfolioButton {
-		margin-left: 80px;
-	}
-	footer {
-		margin-top: -180px;
-	}
+	
 
 }
 /*Phone media query*/
@@ -350,15 +311,13 @@ footer {
 	section {
 		display: grid;
 		justify-content: center;
-		grid-template-columns: 378px;
-		grid-template-rows: 495px 495px 370px 370px 467px 584px 459px;
+		grid-template-columns: 100%;
+		grid-template-rows: 495px ;
 		grid-template-areas: 
 		"heroimg"
 		"headerSection"
 		"storySection"
 		"summarySection"
-		"knowledgeSection"
-		"portfolioSection"
 		"connectSection";
 	}
 	body {
@@ -380,21 +339,15 @@ footer {
 		line-height: 150%;
 }
 	#headerSection {
-		width: 378px;
-		height: 225px;
+		align-items: center;
 		margin-top: -160px;
 	}
-	#name {
-		margin: 0px 0px 0px 16px;
-  	}
-	#position2 {
-		margin: 0px 16px;
-}
+	
 	#summarySection {
-		width: 302px;
-		height: 378px;
-		margin-top: 364px;
-		padding-left: 36.5px;
+		margin-top: 40px;
+		padding-top: 32px;
+		padding-bottom: 32px;
+		padding-left: 28px;
 		padding-right: 36.4px;
 	}
 	#portfolioSection {
@@ -432,13 +385,13 @@ footer {
 		margin-left: 0px;
 	}
 	#storySection{
-		width: 370px;
-		height: 349px;
-		margin-top: 160px;
+	
+		margin-top: 0px;
 		padding: 0;
 		padding-left: 4px;
 		padding-right: 4px;
-		padding-top: 80px;
+		padding-top: 24px;
+		text-align: left;
 	}
 	#knowledgeSection {
 		width: 378px;
@@ -453,10 +406,8 @@ footer {
 		margin-right: 36px;
 	}
 	#connectSection {
-		grid-area: connectSection;
-		width: 378px;
-		height: 199px;
-		margin-top: 1400px;
+		padding-top: 24px;
+		padding-bottom: 24px;
 	}
 	#portfolioButton {
 		margin-right: 300px;
