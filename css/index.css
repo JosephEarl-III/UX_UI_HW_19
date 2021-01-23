@@ -51,11 +51,11 @@ img.logo {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	width: 40%;
+	width: 33%;
 	transition: width .2s ease;
 }
 .logo:hover {
-	width: 42%;
+	width: 35%;
 }
 ul.navgroup {
 	text-align: center;
@@ -81,7 +81,7 @@ section {
 	display: grid;
 	justify-content: center;
 	grid-template-columns: 50% 50%;
-	grid-template-rows: 75% 50% 75%;
+	grid-template-rows: 75% 50% 65%;
 	grid-template-areas: 
 		"heroimg headerSection"
 		"storySection summarySection"
@@ -98,9 +98,10 @@ section {
 #storySection {
 	text-align: right;
 	grid-area: storySection;
-	padding-top: 56px;
+	padding-top: 72px;
 	margin-right: 80px;
 	margin-left: 24px;
+	
 }
 #headerSection {
 	
@@ -111,6 +112,24 @@ section {
 	justify-content: center;
 	flex-direction: column;
 	grid-area: headerSection;
+}
+#headerSection h3 {
+	margin-top: 8px;
+	margin-left: 80px;
+	animation: bounceAction .7s infinite;
+}
+@keyframes bounceAction {
+	0% {
+		transform: translate3d(0px, -5px, 0px);
+		animation-timing-function: ease-in;
+	}
+	50% {
+		transform: translate3d(0px, 5px, 0px);
+		animation-timing-function: ease-in;
+	}
+	100% {
+		transform: translate3d(0px, -5px, 0px);
+	}
 }
 #name {
 	padding: 0px;
@@ -141,11 +160,36 @@ section {
 }
 
 /*My Work section */
-#portfolioSection {
-	grid-row: 3 / span 2;
-	grid-area: portfolioSection;
+.modal {
+	 display: none; 
+  	 position: fixed; 
+  	 z-index: 1; 
+     padding-top: 40px; /* Location of the box */
+	 left: 0;
+     top: 0;
+     width: 100%; 
+     height: 100%; 
+     overflow: auto; 
+     background-color: rgb(0,0,0); 
+     background-color: rgba(0,0,0,0.4); 
 }
-.portfolioText {
+#portfolioSection {
+	 background-color: #fefefe;
+     margin: auto;
+     padding: 20px;
+     border: 1px solid #888;
+     width: 80%;
+	 display: flex;
+	 justify-content: center;
+	 flex-direction: column;
+}
+#LACimg {
+	width: 24%;
+}
+#PoppyImg {
+	width: 11%;
+}
+/*.portfolioText {
 	padding-left: 16px;
 	padding-right: 16px;
 	
@@ -155,7 +199,8 @@ section {
 }
 #portfolioHeader {
 	text-align: center;
-	margin-bottom: 80px;
+	align-self: flex-end;
+	font-size: 56px;
 }
 #portfolioOne {
 	width: 950px;
@@ -164,34 +209,37 @@ section {
 	
 }
 #LACimg {
-	width: 34%;
-	height: 46%;
+	width: 260px;
+	height: 174px;
 	border: 2px solid #8FA580;
 	box-shadow: 0px 3px 6px #00000029;
-	margin-right: 8px;
+	margin: 16px 8px auto auto;
 }
 #portfolioTwo {
 	width: 950px;
 	height: 341px;
 	display: flex;
 	flex-direction: row;
+	
 }
 #PoppyImg {
 	width: 24%;
-	height: 88%;
-	margin-left: 8px;
+	height: 65%;
+	margin: 16px 8px auto 8px;
 	box-shadow: 0px 3px 6px #00000029;
 	border: 2px solid #EBE3DF;
 	opacity: 1;
-}
+}*/
 .portfolioButton {
 	width: 259px;
     height: 30px;
-	font-size: 12px;
+	font-size: 14px;
 	margin-left: 160px;
 	margin: 0 auto;
 }
-
+.close {
+	align-self: baseline;
+}
 
 /*Skills & Contact Section*/
 

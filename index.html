@@ -34,8 +34,8 @@
 
 		<p>Stories remain the heart.</p>
 		<div class="multipleButtons">
-		<button type="button" class="portfolioButton">Skills and tools  &#62;</button>
-		<button type="button" class="portfolioButton">Portfolio glimpse  &#62;</button>
+		<button type="button" class="portfolioButton" id="SkillBtn">Skills and tools  &#62;</button>
+		<button type="button" class="portfolioButton" id="PortBtn">Portfolio snippets  &#62;</button>
 			</div>
 		</div>
 	
@@ -57,6 +57,7 @@
 		<h1 id="name">The name's Joseph.</h1>
 		<h2 id="position">UX Writer &amp; Designer.</h2>
 		<h2 id="position2">Technical Writer.</h2>
+		<h3 id="scrollFade">Scroll into my story &darr;</h3>
 		</div>
 	<div id="summarySection">
 		<div id="summaryText">
@@ -64,7 +65,8 @@
 		<p>Technical and UX writer with a B.A. in English, emphasis in Writing Studies, from Utah Valley University, and currently completing a certificate in UX/UI from the University of Utah. Well-versed in user-centric design, technical writing practices, the agile process, and development in HTML and CSS.</p>
 		</div>
 	</div>
-		<!--div id="portfolioSection">
+		<div id="PortModal" class="modal">
+		<div id="portfolioSection">
 		
 		<h2 id="portfolioHeader">Portfolio Snippets</h2>
 		<div id="portfolioOne">
@@ -89,10 +91,11 @@
 			</div>
 			<img id="PoppyImg" src="images/image-from-rawpixel-id-2328136-png.png" alt="a hand holding a phone and pointing to the screen displaying the poppy splash screen">
 			
+			<button class="close">Close</button>
 			
-			
-		</div-->	
-		
+	</div>
+	</div>	
+		</div>
 	
 	
 	   
@@ -110,5 +113,6 @@
 		
 	
 </body>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 <script src="js/index.js"></script>	
 </html>
