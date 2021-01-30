@@ -77,6 +77,10 @@ li.nav {
 li.nav:hover {
 	border-bottom: 3px solid #25263D;		
 }
+.nav a {
+	color: inherit;
+	text-decoration: inherit;
+}
 section {
 	display: grid;
 	justify-content: center;
